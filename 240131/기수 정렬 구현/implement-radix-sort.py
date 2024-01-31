@@ -6,7 +6,8 @@ for i in range(k):
     sort = [[] for _ in range(10)]
 
     for j in range(len(nums)):
-        digit = int(nums[j][i] or '0')
+        max_digit = len(nums[j])
+        digit = int(nums[j][max_digit - 1 - i] if max_digit > i else '0')
         sort[digit].append(nums[j])
 
     result = list()
