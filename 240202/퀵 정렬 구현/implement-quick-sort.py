@@ -25,9 +25,10 @@ def quick_sort(_nums, _start, _end):
                 _nums[_end] = _nums[pos]
                 _nums[pos] = tmp
 
-        post = sort(_nums, _start, _end)
-        quick_sort(_nums, _start, post - 1)
-        quick_sort(_nums, post + 1, _end)
+        pos = sort(_nums, _start, _end)
+        if pos <= _end:
+            quick_sort(_nums, _start, pos - 1)
+            quick_sort(_nums, pos + 1, _end)
 
 
 def sort(_nums, _start, _end):
