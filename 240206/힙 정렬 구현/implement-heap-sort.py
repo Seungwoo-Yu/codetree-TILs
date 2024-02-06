@@ -24,10 +24,10 @@ def heap_sort():
     for i in range((n - 1) // 2 + 1, 0, -1):
         heapify(n, i)
 
-    for i in range(n - 1, 0, -1):
+    for i in range(n, 1, -1):
         tmp = nums[1]
-        nums[1] = nums[i + 1]
-        nums[i + 1] = tmp
+        nums[1] = nums[i]
+        nums[i] = tmp
         heapify(i - 1, 1)
 
 
