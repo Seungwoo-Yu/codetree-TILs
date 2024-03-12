@@ -8,7 +8,7 @@ for i in range(n):
 
     if arg[0] == 'push_front':
         _len += 1
-        if first is None:
+        if first is None or _len == 1:
             first = [int(arg[1]), None, None]
             last = first
             continue
@@ -19,7 +19,7 @@ for i in range(n):
 
     if arg[0] == 'push_back':
         _len += 1
-        if first is None:
+        if first is None or _len == 1:
             first = [int(arg[1]), None, None]
             last = first
             continue
